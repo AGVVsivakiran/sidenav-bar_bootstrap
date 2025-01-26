@@ -1,5 +1,66 @@
-/* background color start */
-.bg-color-main{
+/* Background color start */
+.bg-color-main {
     background-color: #f0f2f5;
-}
-/* background color end */
+  }
+  /* Background color end */
+  
+  /* Logo start */
+  .logo_modified {
+    height: 50px;
+  }
+  /* Logo end */
+  
+  /* Menu transition start */
+  .menu {
+    transition: all 0.3s ease-in-out;
+    width: 80px; /* Default sidebar width */
+    overflow: hidden; /* Prevent content from spilling */
+    position: fixed; /* Fix sidebar to avoid disturbing the layout */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height */
+    z-index: 10;
+  }
+  .menu:hover {
+    width: 200px; /* Expanded sidebar width */
+  }
+  .menu-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  }
+  .menu:hover .menu-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu-name {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .menu:hover .menu-name {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Prevent adjacent column disturbance */
+  .offset-1 {
+    margin-left: 80px; /* Default sidebar width */
+  }
+  .menu:hover ~ .col {
+    margin-left: 80px; /* Keep main content aligned */
+  }
+  
+  /* Shadow effects for menu items */
+  .menu a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .menu a i {
+    min-width: 30px; /* Align icons properly */
+    text-align: center;
+  }
+  
